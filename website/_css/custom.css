@@ -124,17 +124,18 @@ pre.code-output {
 }
 
 .sidebar-nav .course-section {
-  font-style: italic;
+  font-style: bold;
+  font-size: 24px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #a4adff;
   margin-top: 1em;
 }
 .sidebar-nav .course-section::before,
 .sidebar-nav .course-section::after {
   content: " ";
   flex: 1;
-  border-bottom: 1px dashed #ffffff;
+  border-bottom: 1px dashed #7683fc;
 }
 .sidebar-nav .course-section::before {
   margin-right: 0.25em;
