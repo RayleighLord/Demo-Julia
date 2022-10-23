@@ -127,14 +127,14 @@ pre.code-output {
   font-style: italic;
   display: flex;
   align-items: center;
-  color: #d9a200;
+  color: #ffffff;
   margin-top: 1em;
 }
 .sidebar-nav .course-section::before,
 .sidebar-nav .course-section::after {
   content: " ";
   flex: 1;
-  border-bottom: 1px dashed #d9a200;
+  border-bottom: 1px dashed #ffffff;
 }
 .sidebar-nav .course-section::before {
   margin-right: 0.25em;

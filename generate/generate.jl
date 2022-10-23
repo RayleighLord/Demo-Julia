@@ -104,14 +104,14 @@ show_section_number = false
 
 # ╔═╡ 01a2336a-5c04-4d5a-bb0b-a9c704517dbf
 pages = [
-	(page = "/cheatsheets/", title = "Referencia")
+	(page = "/cheatsheets/", title = "Referencias del lenguaje")
 ]
 
 # ╔═╡ c0768146-5ea0-4736-94f8-2c1a2affa922
 SLASH_PREPATH = !isempty(PREPATH) ? "/" * PREPATH : ""
 
 # ╔═╡ 02e00e09-76a5-4f38-8557-4d9caf280b4c
-homepage = (page = "/index.html", path = "$SLASH_PREPATH/", title = "Welcome")
+homepage = (page = "/index.html", path = "$SLASH_PREPATH/", title = "Bienvenido")
 
 # ╔═╡ d83ee9b9-d255-4217-a776-3b0f4f168c8f
 @bind regenerate Button("Regenerate!")
