@@ -1,6 +1,6 @@
 [
   {
-    "title": "Preliminaries",
+    "title": "Deberes Interactivos",
     "contents": [
       {
         "name": "Julia Basics",
@@ -13,6 +13,18 @@
         "notebook_path": "notebooks/week12/how_to_collaborate_on_software.jl",
         "video_id": "7N9Vvc8amGM",
         "preview_image_url": "https://user-images.githubusercontent.com/6933510/136199704-ba6d0586-34bf-490c-8fd0-6959ab42cd23.png"
+      },
+      {
+        "name": "Deberes sin completar",
+        "notebook_path": "notebooks/collection/homework.jl",
+        "video_id": "",
+        "preview_image_url": ""
+      },
+      {
+        "name": "Deberes completados",
+        "notebook_path": "notebooks/collection/homework_completed.jl",
+        "video_id": "",
+        "preview_image_url": ""
       }
     ]
   },
@@ -26,26 +38,38 @@
         "preview_image_url": ""
       },
       {
-        "name": "The Newton Method2",
-        "notebook_path": "notebooks/week3/newton_method.jl",
+        "name": "Método de Newton",
+        "notebook_path": "notebooks/collection/newton.jl",
         "video_id": "",
         "preview_image_url": ""
       },
       {
-        "name": "The Newton Method3",
-        "notebook_path": "notebooks/week3/newton_method.jl",
+        "name": "Integración",
+        "notebook_path": "notebooks/collection/integration_example.jl",
         "video_id": "",
         "preview_image_url": ""
       },
       {
-        "name": "The Newton Method4",
-        "notebook_path": "notebooks/week3/newton_method.jl",
+        "name": "¿Qué es Julia?",
+        "notebook_path": "notebooks/collection/overview_julia.jl",
         "video_id": "",
         "preview_image_url": ""
       },
       {
-        "name": "The Newton Method5",
-        "notebook_path": "notebooks/week3/newton_method.jl",
+        "name": "Teoría de perturbaciones",
+        "notebook_path": "notebooks/collection/perturbation.jl",
+        "video_id": "",
+        "preview_image_url": ""
+      },
+      {
+        "name": "Visualizando la SVD",
+        "notebook_path": "notebooks/collection/svd.jl",
+        "video_id": "",
+        "preview_image_url": ""
+      },
+      {
+        "name": "ODEs con incertidumbre",
+        "notebook_path": "notebooks/collection/ode_measure.jl",
         "video_id": "",
         "preview_image_url": ""
       }
