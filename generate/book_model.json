@@ -49,7 +49,7 @@
     "title": "Deberes Interactivos",
     "contents": [
       {
-        "name": "Deberes sin completar",
+        "name": "Deberes sin rellenar",
         "notebook_path": "notebooks/collection/homework.jl",
         "video_id": "",
         "preview_image_url": ""

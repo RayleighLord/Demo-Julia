@@ -1,9 +1,7 @@
-# Cheatsheets
+# Referencias sobre Julia
 
-- [Getting Started with Julia - live](/basic_syntax/).
-- [Fastrack to Julia](https://juliadocs.github.io/Julia-Cheat-Sheet/) cheatsheet.
-- [MATLAB-Julia-Python comparative cheatsheet](https://cheatsheets.quantecon.org/) by [QuantEcon group](https://quantecon.org)
-- [Plots.jl cheatsheet](https://github.com/sswatson/cheatsheets/blob/master/plotsjl-cheatsheet.pdf)
-
-> **Acknowledgement** \\
-> This material is taken from _**Computational Thinking**, a live online Julia/Pluto textbook._ [(computationalthinking.mit.edu)](https://computationalthinking.mit.edu)
+- [Documentación de Julia](https://docs.julialang.org/en/v1/).
+- [Tutorial de Julia](https://www.youtube.com/watch?v=Fi7Pf2NveH0&t=389s&ab_channel=GeorgeDatseris).
+- [Comparación entre los comandos de MATLAB-Julia-Python](https://cheatsheets.quantecon.org/) por [QuantEcon group](https://quantecon.org)
+- [Referencia general de Julia](https://juliadocs.github.io/Julia-Cheat-Sheet/)
+- [Foro de Julia](https://discourse.julialang.org/)
