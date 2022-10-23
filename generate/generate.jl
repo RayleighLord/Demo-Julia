@@ -104,10 +104,7 @@ show_section_number = false
 
 # ╔═╡ 01a2336a-5c04-4d5a-bb0b-a9c704517dbf
 pages = [
-	(page = "/logistics/", title = "Class Logistics"),
-	(page = "/syllabus/", title = "Syllabus"),
-	(page = "/installation/", title = "Software installation"),
-	(page = "/cheatsheets/", title = "Cheatsheets")
+	(page = "/cheatsheets/", title = "Referencia")
 ]
 
 # ╔═╡ c0768146-5ea0-4736-94f8-2c1a2affa922
@@ -222,7 +219,7 @@ end
 
 # ╔═╡ 3e93e57c-3660-416f-9874-d43abf99e60e
 INSTRUCTORS = [
-	(name = "Profesor 1", url = ""),
+	(name = "Profesor 1 ", url = ""),
 	(name = "Profesor 2", url = "")
 ] |> instructors
 
@@ -285,7 +282,7 @@ function sidebar_code(book_model)
     <br>
     $(map(enumerate(book_model)) do (chapter_number, chap)
 		@htl("""
-		<div class="course-section">Module $(chapter_number): $(chap.title)</div>
+		<div class="course-section">Sección $(chapter_number): $(chap.title)</div>
 		
 		$(map(enumerate(chap.contents)) do (section_number, section)
 
@@ -294,7 +291,7 @@ function sidebar_code(book_model)
 			notebook_id = flatten_path(without_pluto_file_extension(section.notebook_path))
 			
 		    @htl("""
-		    <a class="sidebar-nav-item {{ispage /$notebook_name/}}active{{end}}" href="$(SLASH_PREPATH)/$notebook_id/"><b>$(chapter_number).$(section_number)</b> - <em>$(section.name)</em></a>
+		    <a class="sidebar-nav-item {{ispage /$notebook_name/}}active{{end}}" href="$(SLASH_PREPATH)/$notebook_id/"><b>$(chapter_number).$(section_number)</b> - $(section.name)</a>
 		    """)
 		end)
 		""")
