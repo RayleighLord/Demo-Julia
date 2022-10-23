@@ -15,7 +15,7 @@ h2 {
 html,
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .sidebar {
@@ -125,7 +125,7 @@ pre.code-output {
 
 .sidebar-nav .course-section {
   font-style: bold;
-  font-size: 24px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   color: #a4adff;
