@@ -52,7 +52,7 @@ md"""
 """
 
 # ╔═╡ 2bee2fc7-3322-457f-a835-028c80eaf059
-TITLE = "Curso de Informática"
+TITLE = "Curso de Informática / Cálculo Científico"
 
 # ╔═╡ a0057e4c-0bcf-4970-8a2b-0412ad5af510
 SUBTITLE = "Demostración de Julia"
@@ -152,7 +152,7 @@ begin
 	    preview_image_url::String
 	end
 		StructTypes.StructType(::Type{Section}) = StructTypes.Struct()
-	
+
 end
 
 # ╔═╡ 0fbcf5d1-b342-427c-a09d-e2f84725ba7f
@@ -185,7 +185,7 @@ file_server_address(paths::AbstractString...) = join([
 ], "/")
 
 # ╔═╡ 35b80456-039e-45bc-963e-5466a3e9c3a7
-@skip_as_script @use_task([]) do 
+@skip_as_script @use_task([]) do
 	sleep(1)
 	error("asdf")
 end
@@ -283,13 +283,13 @@ function sidebar_code(book_model)
     $(map(enumerate(book_model)) do (chapter_number, chap)
 		@htl("""
 		<div class="course-section">Sección $(chapter_number): $(chap.title)</div>
-		
+
 		$(map(enumerate(chap.contents)) do (section_number, section)
 
-			notebook_name = 
+			notebook_name =
 				basename(without_pluto_file_extension(section.notebook_path))
 			notebook_id = flatten_path(without_pluto_file_extension(section.notebook_path))
-			
+
 		    @htl("""
 		    <a class="sidebar-nav-item {{ispage /$notebook_name/}}active{{end}}" href="$(SLASH_PREPATH)/$notebook_id/"><b>$(chapter_number).$(section_number)</b> - $(section.name)</a>
 		    """)
@@ -340,7 +340,7 @@ function embed_youtube(video_id, title = "Lecture Video")
 		    <div  notthestyle="position: relative; right: 0; top: 0; z-index: 300;">
 		    <iframe src="https://www.youtube.com/embed/$(video_id)" width=400 height=250  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 			</div>
-			
+
 		    </div>
 			"""
 		)
@@ -355,9 +355,9 @@ function format_section_number(chapter_number, section_number)
     	font-size: 1.5rem;
     	opacity: .8;
     	">$(emph("Section $(chapter_number).$(section_number)"))</p>
-		"""	
+		"""
 	)
-end	
+end
 
 # ╔═╡ b007e5cc-d7c3-4275-86fd-9098bc398b23
 function notebook_header(section::Section, chapter_number::Integer, section_number::Integer; show_section_number=true)
@@ -394,14 +394,14 @@ function notebook_header(section::Section, chapter_number::Integer, section_numb
     font-family: Vollkorn, serif;
     font-weight: 700;
     font-feature-settings: 'lnum', 'pnum';
-    "> 
+    ">
 	$(show_section_number ? format_section_number(chapter_number, section_number) : "")
     <p style="text-align: center; font-size: 2rem;">
     $(emph(section.name))
     </p>
 
 	$(embed_youtube(section.video_id))
-	
+
     <style>
     body {
     overflow-x: hidden;
@@ -443,16 +443,16 @@ end
 function franklin_config()
 	franklin_config_file_base = joinpath(WEBSITE_DIR, "franklin-config.md")
 	franklin_config_file = joinpath(website_dir, "config.md")
-	
+
 	cp(franklin_config_file_base, franklin_config_file, force=true)
 
 	isfile(franklin_config_file)
 
 	open(franklin_config_file, "a") do f
 
-		write(f, 
+		write(f,
 			"""
-			
+
 			@def title = "$TITLE"
 			@def prepath = "$PREPATH"
 			@def description = "$TITLE - $SUBTITLE"
@@ -590,35 +590,35 @@ index_footer = "" #= @htl("""
 function html_page(content, root_dir::String=".")
 	@htl("""
 	<html lang="en">
-	
+
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	    $(index_styles(root_dir))
 	    <link rel="icon" href="$(root_dir)/assets/favicon.png">
-	
+
 	    <title>$TITLE</title>
 	</head>
-	
+
 	<body>
 	    $(sidebar)
 	    <div class="content container">
-	
+
 	        <!-- Content appended here -->
 	        <div class="franklin-content">
 				$(content)
-	
+
 	        </div><!-- CONTENT ENDS HERE -->
-	
+
 	    </div> <!-- div: content container -->
-	
+
 	    $(index_footer)
 	</body>
-	
+
 	</html>
 	""")
-	
+
 end
 
 # ╔═╡ 29a3e3f4-1c7a-44e4-89c2-ce12d31f4fd7
@@ -660,7 +660,7 @@ function add_sidebar(page_dir)
 	new_page_dir = page_dir # joinpath(output_dir, page_name)
 	isdir(new_page_dir) || mkpath(new_page_dir)
 
-	
+
 	@chain index_page begin
 		iframe
 		html_page(@htl("""
@@ -684,11 +684,11 @@ function notebook_html_page(section)
 	new_jl_name = flatten_path(section.notebook_path)
 	new_jl_relpath = "notebooks/$(new_jl_name)"
 	new_html_relpath = without_pluto_file_extension(new_jl_relpath) * ".html"
-	
+
 	html_page(
 		@htl("""
 		$(notebook_index_styles)
-	
+
 		$(iframe("../$(new_html_relpath)"))
 		"""),
 		".."
@@ -718,7 +718,7 @@ end
 
 # ╔═╡ adc183d3-2615-4334-88f0-2f8f0876b4b7
 output_filenames = flatmap(enumerate(book_model)) do (chapter_number, chap)
-	
+
 	map(enumerate(chap.contents)) do (section_number, section)
 		new_path = output_notebook_relpath(section)
 
@@ -726,7 +726,7 @@ output_filenames = flatmap(enumerate(book_model)) do (chapter_number, chap)
 		notebook = Pluto.load_notebook_nobackup(joinpath(PROJECT_ROOT, section.notebook_path))
 		notebook.path = new_path
 
-		# generate UUIDs deterministically to avoid changing the notebook hash 
+		# generate UUIDs deterministically to avoid changing the notebook hash
 		my_rng = Random.MersenneTwister(123)
 
 		# generate code for the header
@@ -751,7 +751,7 @@ end
 # ╔═╡ 866746a1-8102-431c-94e5-f93f6c98e825
 notebook_htmls_generated = let
 	output_filenames
-	
+
 	Logging.with_logger(Logging.NullLogger()) do
 		PlutoSliderServer.export_directory(pluto_notebooks_output_dir; Export_cache_dir=pluto_cache_dir)
 	end
@@ -759,14 +759,14 @@ end; GENERATED_NOTEBOOKS = 0
 
 # ╔═╡ ccdea15d-1182-4d96-a7ab-26aa59a6002e
 notebook_index_filenames = flatmap(enumerate(book_model)) do (chapter_number, chap)
-	
+
 	map(enumerate(chap.contents)) do (section_number, section)
 		new_html_path = index_html_filename(section)
 
 		static_assets
 
 		write(new_html_path, "<!doctype html>\n" * string(notebook_html_page(section)))
-		new_html_path	
+		new_html_path
 	end
 end; PLUTO_DONE = GENERATED_NOTEBOOKS + 1
 
