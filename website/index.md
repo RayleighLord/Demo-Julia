@@ -8,6 +8,6 @@ En la **Sección 2** se puede encontrar una recopilación de cuadernos en los qu
 
 Finalmente, en la **Sección 3** se incluye una plantilla de cómo se pueden crear deberes interactivos usando Julia y los cuadernos Pluto. Estos cuadernos van corrigiendo de manera dinámica el ejercicio, por lo que el alumno sabe si está desarrollando bien el código o tiene algún error al momento. Se incluye también el cuaderno con las soluciones.
 
-(Como pequeño adelanto, la siguiente imagen se corresponde a una demostración interactiva del método de [Newton](notebooks_collection_integration_example))
+(Como pequeño adelanto, la siguiente imagen se corresponde a una demostración interactiva del método de Newton)
 
 ![img](https://github.com/RayleighLord/Resources/blob/main/img/newton_sketch.png?raw=true)
