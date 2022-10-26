@@ -16,10 +16,10 @@ html"""
 </div>
 
 <div class="nb-intro">
-	<div class="header-box"> 
+	<div class="header-box">
 		<p class="nb-intro-header">Introducción</p>
 		<p class="nb-intro-title">Julia, un lenguaje para el cálculo científico</p>
-		<p style="text-align:center;"> 
+		<p style="text-align:center;">
 			<img src="https://github.com/RayleighLord/Resources/blob/main/img/logos/julia-logo.png?raw=true" alt="RayleighLord"
 			width="50%"
 			class="logo">
@@ -67,7 +67,7 @@ html"""
 }
 
 .header-box:hover {
-	transform: translateY(-5px);	
+	transform: translateY(-5px);
 	box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
 }
 
@@ -122,7 +122,7 @@ md"""
 
 # ╔═╡ b14db253-adee-4588-a87a-d31ba0b3f289
 md"""
-**Julia** es un lenguaje de propósito general, pero con el cálculo científico con un rol central en el desarrollo del mismo. 
+**Julia** es un lenguaje de propósito general, pero con el cálculo científico con un rol central en el desarrollo del mismo.
 
 En este cuaderno interactivo se van a mostrar algunas de las características de este lenguaje, para ilustrar el atractivo que tiene para hacer ciencia, teniendo la sintáxis más conectada con las ecuaciones que uno escribe en un papel.
 
@@ -136,7 +136,7 @@ md"""
 
 # ╔═╡ 9f7f0c59-1048-46fd-a898-142bfaf8fb1c
 md"""
-Productos con vectores y matrices son dos tipos de operaciones muy demandadas a realizar por un ordenador. Veamos cómo se trabaja con estos elementos en **Julia**, haciendo uso de caracteres especiales que este lenguaje nos permite para acercar el código lo más posible a las matemáticas. 
+Productos con vectores y matrices son dos tipos de operaciones muy demandadas a realizar por un ordenador. Veamos cómo se trabaja con estos elementos en **Julia**, haciendo uso de caracteres especiales que este lenguaje nos permite para acercar el código lo más posible a las matemáticas.
 """
 
 # ╔═╡ 208a0087-4839-41de-a9fb-bad8f8bfc69f
@@ -173,7 +173,7 @@ md"""
 
 # ╔═╡ 5ff813d1-4e2f-4ada-9566-1d4102d8ee9e
 md"""
-Una vez hemos creado vectores, vamos a ver cómo se trabaja con ellos en Julia. Como este lenguaje permite usar un amplio rango de caracteres, también podemos incluir aquellos que representan ciertas operaciones matemáticas. Por ello, debido a la expresividad que tiene el lenguaje,  se pueden utilizar símbolos como `⋅` y `×` para ejecutar la operación de producto escalar y vectorial, respectivamente. 
+Una vez hemos creado vectores, vamos a ver cómo se trabaja con ellos en Julia. Como este lenguaje permite usar un amplio rango de caracteres, también podemos incluir aquellos que representan ciertas operaciones matemáticas. Por ello, debido a la expresividad que tiene el lenguaje,  se pueden utilizar símbolos como `⋅` y `×` para ejecutar la operación de producto escalar y vectorial, respectivamente.
 
 Estas operaciones ya están definidas en la librería de Álgebra Lineal, que se puede importar con la línea `using LinearAlgebra`.
 """
@@ -215,12 +215,12 @@ u⃗ × v⃗ # Esta línea se escribe u\vec<tab> \times<tab> v\vec<tab>
 
 # ╔═╡ 52312114-6ff5-44aa-8e51-205e152d7bac
 md"""
-- El **producto escalar** elimina una dimensión a los vectores, devolviendo un escalar. 
-- El **producto vectorial** no varía el rango de los vectores, devolviendo otro vector del mismo tamaño. 
+- El **producto escalar** elimina una dimensión a los vectores, devolviendo un escalar.
+- El **producto vectorial** no varía el rango de los vectores, devolviendo otro vector del mismo tamaño.
 
-Ahora vamos a ver un tipo de operación que se denota como **producto tensorial**, el cual partiendo de dos vectores sube de rango y nos devuelve una matriz. Esta operación se denota con el símbolo `⊗` y, de manera visual, la operación que se realiza es 
+Ahora vamos a ver un tipo de operación que se denota como **producto tensorial**, el cual partiendo de dos vectores sube de rango y nos devuelve una matriz. Esta operación se denota con el símbolo `⊗` y, de manera visual, la operación que se realiza es
 
-$$\vec{u} \otimes \vec{v} = \begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} \otimes \begin{pmatrix}1 & 1 & 1\end{pmatrix} = \begin{pmatrix}1 * \begin{pmatrix}1 & 1 & 1\end{pmatrix}  \\ 2 * \begin{pmatrix}1 & 1 & 1\end{pmatrix} \\ 3 * \begin{pmatrix}1 & 1 & 1\end{pmatrix}\end{pmatrix} = 
+$$\vec{u} \otimes \vec{v} = \begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} \otimes \begin{pmatrix}1 & 1 & 1\end{pmatrix} = \begin{pmatrix}1 * \begin{pmatrix}1 & 1 & 1\end{pmatrix}  \\ 2 * \begin{pmatrix}1 & 1 & 1\end{pmatrix} \\ 3 * \begin{pmatrix}1 & 1 & 1\end{pmatrix}\end{pmatrix} =
 \begin{pmatrix}
 1 & 1 & 1 \\
 2 & 2 & 2 \\
@@ -266,7 +266,7 @@ Para generar una matriz, utilizamos una sintáxis idéntica a como lo escribirí
 
 # ╔═╡ f8dfb372-07ba-4510-88ca-e94e4bd1d2a5
 A = [1  2  3
-     4  2  0 
+     4  2  0
      2  1  1]
 
 # ╔═╡ ab61018a-bf28-4394-b09e-84d0e1b567ef
@@ -297,7 +297,7 @@ v⃗' * A * u⃗
 md"""
 Ahora vamos a ver brevemente cómo resolver un sistema lineal de ecuaciones en Julia. La resolución de sistemas lineales es uno de los problemas más frecuentes para los que se recurre a un ordenador. Estos problemas son del tipo $Ax = b$, donde para un $A$ y $b$ conocidos, tenemos que hallar el vector de incógnitas $x$.
 
-Sin mucho conocimiento de nuestro problema, la aproximación más sencilla es utilizar el operador `\`, que resuelve el sistema sin invertir la matriz, por motivos de eficiencia. Sin embargo, Julia es un lenguaje que dependiendo del tipo de los argumentos de entrada de las funciones, puede ejecutar unas sentencias u otras (en inglés esto se llama *multiple dispatch* y es más general que la sobrecarga de funciones que hay en otros lenguajes como C++). 
+Sin mucho conocimiento de nuestro problema, la aproximación más sencilla es utilizar el operador `\`, que resuelve el sistema sin invertir la matriz, por motivos de eficiencia. Sin embargo, Julia es un lenguaje que dependiendo del tipo de los argumentos de entrada de las funciones, puede ejecutar unas sentencias u otras (en inglés esto se llama *multiple dispatch* y es más general que la sobrecarga de funciones que hay en otros lenguajes como C++).
 
 Así, si por ejemplo la matriz `A` que le damos es una matriz factorizada con un tipo que reconoce Julia, el operador `\` se aprovecha directamente de esta factorización.
 """
@@ -457,7 +457,7 @@ Además, cabe destacar que las velocidades de ejecución de los programas en Jul
 
 Esto permite resolver el conocido como **_Problema de los dos lenguajes_**. Actualmente, para obtener un prototipo rápido de una idea, la velocidad de desarrollo es mucho mayor en un lenguaje dinámico e interpretado como Python. Una vez probada esta idea, si se requiere de rendimiento, hay que acudir a un lenguaje de más bajo nivel y mucho más complicado de programar.
 
-Julia pretende resolver este problema ofreciendo un lenguaje dinámico pero donde las las funciones se compilan antes de ejecutarse, ganando así el rendimiento que se perdería en lenguajes interpretados.
+Julia pretende resolver este problema ofreciendo un lenguaje dinámico pero donde las funciones se compilan antes de ejecutarse, ganando así el rendimiento que se perdería en lenguajes interpretados.
 """
 
 # ╔═╡ 1cea1cae-c9bd-4fc3-a4b5-d8b11efa7c21
@@ -529,7 +529,7 @@ c_suma(X::Array{Float64}) = ccall(("c_sum", Clib), Float64, (Csize_t, Ptr{Float6
 
 # ╔═╡ 82fb52d0-d02f-434b-aab2-78d090092d13
 md"""
-A la vista de los benchmark anteriores, una implementación *naive* de la función suma tanto en Julia como en C aporta tiempos muy similares. 
+A la vista de los benchmark anteriores, una implementación *naive* de la función suma tanto en Julia como en C aporta tiempos muy similares.
 
 Probemos esta misma implementación utilizando Python nativo (sin librerías).
 """
@@ -554,7 +554,7 @@ end
 
 # ╔═╡ 0d7df1b9-c9cf-4967-89b7-2b1bebb04945
 md"""
-Como se puede ver, la implementación nativa de Python es muchísimo más lenta que Julia y C. Esto es debido a que, en un lenguaje interpretado, la ejecución de bucles es una operación muy mala para el rendimiento porque en cada iteración tiene que checkear los tipos de variables. 
+Como se puede ver, la implementación nativa de Python es muchísimo más lenta que Julia y C. Esto es debido a que, en un lenguaje interpretado, la ejecución de bucles es una operación muy mala para el rendimiento porque en cada iteración tiene que checkear los tipos de variables.
 
 En Python, para conseguir velocidad se necesita utilizar una librería llamada NumPy, la cual llama a códigos optimizados en C y Fortran para realizar este tipo de cálculos. En la jerga de Python y MATLAB, siempre se suele decir que para obtener rendimiento hay que vectorizar todo lo posible el código, que no es otra cosa que escribirlo de tal manera que se puedan hacer el máximo número de llamadas posibles a lenguajes de bajo nivel que ejecuten el código de manera muy eficiente.
 """
