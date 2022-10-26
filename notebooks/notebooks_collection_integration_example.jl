@@ -26,10 +26,10 @@ html"""
 </div>
 
 <div class="nb-intro">
-	<div class="header-box"> 
+	<div class="header-box">
 		<p class="nb-intro-header"> Integración Numérica </p>
 		<p class="nb-intro-title"> Integración en Julia</p>
-		<p style="text-align:center;"> 
+		<p style="text-align:center;">
 			<img src="https://github.com/RayleighLord/Resources/blob/main/img/logos/logo.png?raw=true" alt="RayleighLord"
 			width="30%"
 			class="logo">
@@ -77,7 +77,7 @@ html"""
 }
 
 .header-box:hover {
-	transform: translateY(-5px);	
+	transform: translateY(-5px);
 	box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
 }
 
@@ -155,7 +155,7 @@ donde `f` es la función a integrar, `a` el límite inferior de integración, `b
 
 # ╔═╡ bc9f64fb-fbe8-4f31-93a9-4ddfb4ce86bf
 md"""
-Imaginemos que quieremos integrar la función $f(x) = x^3$ en el intervalo $[0, 1]$, cuyo resultado exacto es $0.25$. Esta función en Julia se puede definir como
+Imaginemos que queremos integrar la función $f(x) = x^3$ en el intervalo $[0, 1]$, cuyo resultado exacto es $0.25$. Esta función en Julia se puede definir como
 """
 
 # ╔═╡ 035a9452-0790-4605-bfec-caed7e32196d
@@ -204,7 +204,7 @@ Esta estructura la vamos a definir en la siguiente celda
 
 # ╔═╡ 9ee73c40-31d9-45c9-9e25-c17bb560e204
 begin
-	
+
 	struct Domain1D
 		a
 		b
@@ -236,13 +236,13 @@ Para luego poder aplicar el símbolo ∫ a una función y realizar la integral, 
 
 # ╔═╡ c5e48f8d-afe7-40f4-9f93-af769648ada9
 begin
-	
-	struct Integrator 
+
+	struct Integrator
 		f
 	end
 
 	(I::Integrator)(f) = I.f = f
-	
+
 end
 
 # ╔═╡ d23eab52-0fd2-489d-8d6c-4cc7b75679b4
@@ -251,7 +251,7 @@ Así, podemos almacenar una función en integrator de la siguiente manera
 """
 
 # ╔═╡ d9fba7b4-51ca-414a-94dd-94bd0c0552e3
-let 
+let
 	g(x) = x^2
 	int_g = Integrator(g)
 	int_g.f(5) # Debería salir g(5) = 25
