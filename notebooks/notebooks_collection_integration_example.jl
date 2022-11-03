@@ -300,7 +300,7 @@ end
 
 # ╔═╡ 0ab924e1-4836-4abc-82d0-4d5310cf66c2
 md"""
-¡Y con esto ya hemos acabado! Podemos integrar cualquier función en un intervalo arbitrario. Por ejemplo, programemos la integración de la función $h(x) = x + x^2 $ en el intervalo $[0, 2]$.
+¡Y con esto ya hemos acabado! Podemos integrar cualquier función en un intervalo arbitrario. Por ejemplo, programemos la integración de la función $h(x) = x + 3x^2 $ en el intervalo $[0, 2]$.
 """
 
 # ╔═╡ 17cbbf12-f60d-4c26-8f0c-1ca990615a15

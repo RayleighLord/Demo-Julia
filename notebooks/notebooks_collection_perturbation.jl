@@ -26,10 +26,10 @@ html"""
 </div>
 
 <div class="nb-intro">
-	<div class="header-box"> 
+	<div class="header-box">
 		<p class="nb-intro-header"> Teoría de Perturbaciones </p>
 		<p class="nb-intro-title"> Resolviendo una ecuación quíntica </p>
-		<p style="text-align:center;"> 
+		<p style="text-align:center;">
 			<img src="https://github.com/RayleighLord/Resources/blob/main/img/logos/logo.png?raw=true" alt="RayleighLord"
 			width="30%"
 			class="logo">
@@ -77,7 +77,7 @@ html"""
 }
 
 .header-box:hover {
-	transform: translateY(-5px);	
+	transform: translateY(-5px);
 	box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
 }
 
@@ -121,7 +121,7 @@ main preamble {
 
 # ╔═╡ 58fdf9e2-8dc6-43e2-9798-8e992dac2053
 begin
-	using PlutoUI, Symbolics, SymbolicUtils
+    using PlutoUI, Symbolics, SymbolicUtils
 end
 
 # ╔═╡ 4d82230e-3805-444b-a94d-1668ceed5170
@@ -273,7 +273,7 @@ X(0)
 
 # ╔═╡ d72cc964-915e-46bb-89fb-93f1d0265417
 md"""
-Para $\epsilon = 0.1$, la solución exacta es $\approx 0.958337$ y utilizando el desarrollo perturbativo se obtiene
+Para $\epsilon = 0.2$, la solución exacta es $\approx 0.958337$ y utilizando el desarrollo perturbativo se obtiene
 """
 
 # ╔═╡ 3f89e214-f41e-4170-99e4-b5ddac58fc13
