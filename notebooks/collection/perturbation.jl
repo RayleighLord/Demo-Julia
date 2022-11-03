@@ -13,7 +13,11 @@ using InteractiveUtils
 # This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
 macro bind(def, element)
     quote
-        local iv = try Base.loaded_modules[Base.PkgId(Base.UUID("6e696c72-6542-2067-7265-42206c756150"), "AbstractPlutoDingetjes")].Bonds.initial_value catch; b -> missing; end
+        local iv = try
+            Base.loaded_modules[Base.PkgId(Base.UUID("6e696c72-6542-2067-7265-42206c756150"), "AbstractPlutoDingetjes")].Bonds.initial_value
+        catch
+            b -> missing
+        end
         local el = $(esc(element))
         global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : iv(el)
         el
@@ -22,7 +26,7 @@ end
 
 # ╔═╡ 58fdf9e2-8dc6-43e2-9798-8e992dac2053
 begin
-	using PlutoUI, Symbolics, SymbolicUtils
+    using PlutoUI, Symbolics, SymbolicUtils
 end
 
 # ╔═╡ 719af058-3505-4ede-be04-557a448d8ade
@@ -31,10 +35,10 @@ html"""
 </div>
 
 <div class="nb-intro">
-	<div class="header-box"> 
+	<div class="header-box">
 		<p class="nb-intro-header"> Teoría de Perturbaciones </p>
 		<p class="nb-intro-title"> Resolviendo una ecuación quíntica </p>
-		<p style="text-align:center;"> 
+		<p style="text-align:center;">
 			<img src="https://github.com/RayleighLord/Resources/blob/main/img/logos/logo.png?raw=true" alt="RayleighLord"
 			width="30%"
 			class="logo">
@@ -82,7 +86,7 @@ html"""
 }
 
 .header-box:hover {
-	transform: translateY(-5px);	
+	transform: translateY(-5px);
 	box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
 }
 
@@ -273,7 +277,7 @@ X(0)
 
 # ╔═╡ d72cc964-915e-46bb-89fb-93f1d0265417
 md"""
-Para $\epsilon = 0.1$, la solución exacta es $\approx 0.958337$ y utilizando el desarrollo perturbativo se obtiene
+Para $\epsilon = 0.2$, la solución exacta es $\approx 0.958337$ y utilizando el desarrollo perturbativo se obtiene
 """
 
 # ╔═╡ 3f89e214-f41e-4170-99e4-b5ddac58fc13
