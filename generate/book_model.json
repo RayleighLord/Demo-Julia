@@ -42,12 +42,6 @@
         "notebook_path": "notebooks/collection/ode_measure.jl",
         "video_id": "",
         "preview_image_url": ""
-      },
-      {
-        "name": "Diferenciación automática",
-        "notebook_path": "notebooks/collection/automatic_diff.jl",
-        "video_id": "",
-        "preview_image_url": ""
       }
     ]
   },
